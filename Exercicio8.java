@@ -20,7 +20,10 @@ public class Exercicio8 {
         int anoAtual = scanner.nextInt();
 
         System.out.print("Digite o sexo Masculino ou Feminino : ");
-        String sexo = scanner.next();
+        String sexo = scanner.next().toLowerCase();
+
+        System.out.print("Digite o tempo de serviço : ");
+        int tempoDeServico = Integer.valueOf(scanner.next());
 
 
         int idade = anoAtual - anoNascimento;
@@ -29,13 +32,9 @@ public class Exercicio8 {
         boolean qualificado = false;
 
 
-        if (idade >= 65 && sexo.equals("masculino")) {
+        if (idade >= 65 && sexo.equals("masculino") && tempoDeServico >= 30) {
             qualificado = true;
-        } else if (idade >= 60 && sexo.equals("feminino")) {
-            qualificado = true;
-        } else if (idade >= 30 && sexo.equals("masculino")) {
-            qualificado = true;
-        } else if (idade >= 25 && sexo.equals("feminino")) {
+        } else if (idade >= 60 && sexo.equals("feminino") && tempoDeServico >= 25 ) {
             qualificado = true;
         }
 
