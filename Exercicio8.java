@@ -24,9 +24,11 @@ public class Exercicio8 {
 
         System.out.print("Digite o tempo de serviço : ");
         int tempoDeServico = Integer.valueOf(scanner.next());
-
-
         int idade = anoAtual - anoNascimento;
+        if(tempoDeServico >= idade) {
+            System.out.println("CONDIÇÃO IMPOSSIVEL");
+        }
+        else {
 
         // Verifica se o empregado está qualificado para a aposentadoria
         boolean qualificado = false;
@@ -45,7 +47,7 @@ public class Exercicio8 {
             System.out.println("O empregado com código " + codigoEmpregado + " não está qualificado para a aposentadoria.");
         }
 
-        scanner.close();
+        scanner.close(); }
     }
     }
 
